@@ -1,5 +1,6 @@
 import Formulario from "@/components/formulario";
 import NavBar from "@/components/navBar";
+import BarraProgreso from "@/components/BarraProgreso";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
 
         <NavBar />
         <Formulario/>
+        <BarraProgreso/>
       </main>
     </div>
   );
