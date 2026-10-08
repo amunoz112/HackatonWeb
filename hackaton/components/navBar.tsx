@@ -1,7 +1,7 @@
 
 export default function NavBar() {
   return (
-    <nav className="flex w-full items-center justify-between bg-gray-800 px-6 py-4 text-white  rotate-180">
+    <nav className="flex w-full items-center justify-between bg-gray-800 px-6 py-4 text-white  scale-x-[-1]">
       <h1 className="text-xl font-bold">Navbar</h1>
 
       <div className="flex items-center gap-6">
