@@ -9,7 +9,6 @@ export default function Home() {
 
         <NavBar />
         <BarraProgreso/>
-        <Formulario />
       </main>
     </div>
   );
