@@ -1,5 +1,7 @@
 import NavBar from "@/components/navBar";
 import BarraProgreso from "@/components/BarraProgreso";
+import Timer from "@/components/Timer"
+
 
 export default function Home() {
   return (
@@ -8,6 +10,7 @@ export default function Home() {
 
         <NavBar />
         <BarraProgreso/>
+        <Timer/>
 
       </main>
     </div>
