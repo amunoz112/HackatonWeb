@@ -33,49 +33,37 @@ export default function Formulario() {
   }
 
   return (
-    <div className="flex flex-row items-start justify-center gap-8 p-8">
+    <div className="flex gap-10 p-5 text-black">
 
-      {/* FORMULARIO */}
-      <form
-        onSubmit={handleSubmit}
-        className="w-96 space-y-5 rounded-xl bg-white p-6 shadow-lg"
-      >
-        <h2 className="text-2xl font-bold text-slate-800">
-          Formulario de Usuario
-        </h2>
+      <form onSubmit={handleSubmit} className="w-64">
+        <h2>Formulario de Usuario</h2>
 
-        <div>
-          <label className="block text-sm font-semibold text-slate-700">
-            Nombre de usuario
-          </label>
+        <div className="mt-4">
+          <label>Nombre de usuario</label>
           <input
             type="text"
             name="username"
             value={planData.username}
             onChange={handleChange}
             required
-            className="mt-1 w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-black"
+            className="border p-1 w-full"
           />
         </div>
 
-        <div>
-          <label className="block text-sm font-semibold text-slate-700">
-            Nombre completo
-          </label>
+        <div className="mt-4">
+          <label>Nombre completo</label>
           <input
             type="text"
             name="fullName"
             value={planData.fullName}
             onChange={handleChange}
             required
-            className="mt-1 w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-black"
+            className="border p-1 w-full"
           />
         </div>
 
-        <div>
-          <label className="block text-sm font-semibold text-slate-700">
-            Edad
-          </label>
+        <div className="mt-4">
+          <label>Edad</label>
           <input
             type="number"
             name="age"
@@ -83,36 +71,21 @@ export default function Formulario() {
             onChange={handleChange}
             min="1"
             required
-            className="mt-1 w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-black"
+            className="border p-1 w-full"
           />
         </div>
 
-        <button
-          type="submit"
-          className="w-full rounded-xl bg-blue-600 px-4 py-3 font-semibold text-white hover:bg-blue-700"
-        >
-          Enviar formulario
+        <button type="submit" className="border p-2 mt-4">
+          Enviar
         </button>
       </form>
 
-      {/* RESPUESTAS */}
       {submittedData && (
-        <div className="w-96 rounded-xl bg-white p-6 shadow-lg">
-          <h2 className="mb-5 text-2xl font-bold text-slate-800">
-            Respuestas enviadas
-          </h2>
-
-          <div className="space-y-4 text-slate-700">
-            <p>
-              <strong>Usuario:</strong> {submittedData.username}
-            </p>
-            <p>
-              <strong>Nombre completo:</strong> {submittedData.fullName}
-            </p>
-            <p>
-              <strong>Edad:</strong> {submittedData.age}
-            </p>
-          </div>
+        <div className="border p-4">
+          <h2>Respuestas</h2>
+          <p>Usuario: {submittedData.username}</p>
+          <p>Nombre: {submittedData.fullName}</p>
+          <p>Edad: {submittedData.age}</p>
         </div>
       )}
 
